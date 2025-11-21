@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Selamat Ulang Tahun Firda</title>
+  <meta name="description" content="HTML Replit Coding">
+  <link rel="icon" type="image/x-icon" href="https://feeldreams.github.io/kadoin.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <audio src="musikultahbuatmu.mp3" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <img src="lotsowpp.jpg" id="wallpaper" alt="Wallpaper Lotso" />
+    <div id="beneranblur"></div>
+  </div>
+
+  <div id="Content">
+
+    <div id="kadoIn">
+      <!-- Tombol Surat -->
+      <img src="https://feeldreams.github.io/kadoin.png" alt="Kado Untuk Firda" />
+    </div>
+    <p id="ket">Klik Kadonya Firrr</p>
+
+    <div class="kumpulanstiker">
+      <!-- Stiker untuk Konten -->
+      <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker" alt="Stiker Bunga" />
+      <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker1" alt="Stiker Pusn" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2" alt="Stiker Panda Coklat" />
+      <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker3" alt="Stiker Cilukba" />
+      <img src="https://feeldreams.github.io/pandakuning.gif" id="fotostiker4" alt="Stiker Panda Kuning" />
+      <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5" alt="Stiker Emang Wa" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker6" alt="Stiker Panda Coklat Lagi" />
+    </div>
+
+    <p id="halo" class="halo"></p>
+
+    <div>
+      <blockquote id="bq" data-text="">
+        <p id="kalimat">Aku Ada Sesuatu Nih 🤣</p>
+        <p id="pesan1" style="text-align: center;">Klik Semua Kadonya Firr🤣</p>
+        <ul id="kolombaru" style="ustify-content: center; gap: 10px; padding: 0; list-style: none; justify-items: center; text-align: center;">
+          <li id="lv1" style="font-size:2em; text-align: center;">🎁</li>
+          <li id="lv2" style="font-size:2em; text-align: center;">🎁</li>
+          <li id="lv3" style="font-size:2em; text-align: center;">🎁</li>
+          <li id="lv4" style="font-size:2em; text-align: center;">🎁</li>
+        </ul>
+        <p id="pesan2">Tunggu..., sabarr Firr</p>
+        <!-- Pesan -->
+        <p id="pesan3">Ciee.. Ada yang Ultah, maap agak telat nehh ucapan 🤣</p>
+        <p id="pesan4">Happy Birthday,</p>
+        <p id="pesan5" class="gaya2">Nambah tua aja ya, hehe. makin dewasa yaa kauu Firr</p>
+        <p id="pesan6" class="gaya2">Sehat selalu, panjang umur dan panjang karirnya...</p>
+        <p id="pesan7" class="gaya2">Semangat terusss berkarirnyaa Firrrr</p>
+        <p id="pesan8" class="gaya2">Wkwwk</p>
+        <p id="pesan9" class="gaya2">Oh iya, semoga di hari spesialmu ini kamu dapat menjadi pribadi yang lebih baik yaa.. Firrr  🥳</p>
+        <p id="pesan10" class="gaya2">Happy Level Up Day!! buat Firdha 🥳</p>
+        <!-- Tombol Lanjut -->
+        <p id="opsL">Klik sini Firr...</p>
+      </blockquote>
+    </div>
+
+    <!-- Tombol Kirim Pesan -->
+    <div id="Tombol"><a id="By">&#128140; Klikk aja Firr buru</a></div>
+
+    <!-- Pesan Tambahan -->
+    <p id="katatambahan" class="sembunyi">Asekkk dikasih tau neh, btw makasih wkwkk</p>
+
+    <!-- Pesan Ditolak -->
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif" alt="Stiker Ditolak" />
+      <p id="kataditolak">Yaudah kalo gamau mh wkwkkk</p>
+    </div>
+
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const linkmp3 = document.getElementById("linkmp3");
+    const Content = document.getElementById("Content");
+    const wallpaper = document.getElementById("wallpaper");
+    const kadoIn = document.getElementById("kadoIn");
+    const ket = document.getElementById("ket");
+    const fotostiker = document.getElementById("fotostiker");
+    // Initialize Audio
+    let audio = new Audio(linkmp3.src);
+    let ftganti = 0, fungsi = 0, fungsiAwal = 0;
+    let deffotostiker = fotostiker ? fotostiker.src : "";
+
+    function berjatuhan() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-snowflake";
+      heart.style.left = (Math.random() * 90) + "vw";
+      heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
+      body.appendChild(heart);
+    }
+    setInterval(function () {
+      var heartArr = document.querySelectorAll(".fa-snowflake");
+      if (heartArr.length > 100) {
+        heartArr[0].remove();
+      }
+    }, 100);
+
+    Content.style.opacity = "1";
+    Content.style.marginTop = "16vh";
+
+    const swalst = Swal.mixin({
+      timer: 4300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90
+    });
+
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: '#FF0040',
+      imageHeight: 80,
+    });
+
+    kadoIn.onclick = function () {
+      if (fungsiAwal == 0) {
+        audio.play();
+        fungsiAwal = 1;
+        kadoIn.style.transition = "all .8s ease";
+        kadoIn.style.transform = "scale(10)";
+        kadoIn.style.opacity = "0";
+        wallpaper.style.transform = "scale(1.5)";
+        ket.style.display = "none";
+        setTimeout(initengahan, 300);
+        setTimeout(inipesan, 600);
+      }
+    };
+
+    async function inipesan() {
+      window.nama = "Firdhaaaa";
+      vketikhalo = "Selamat ulang tahun Firdhaaaa";
+      if (typeof mulainama === "function") mulainama();
+    }
+
+    // Variable Pertanyaan Akhir
+    var tanya = 'emm kalau boleh tauuu ni yeee 🤣';
+    var opstanya = 'aman, ga jawab ga papa';
+    var tompositif = 'Impian kedepan Firda apa?';
+    var tomnegatif = 'Tidak mau dikasih tau';
+
+    async function menuju() {
+      var pesanwhatsapp = "apa? wkwkk ga wajib balas firr santai";
+      window.location = "https://api.whatsapp.com/send?phone=6282220738427&text=" + encodeURIComponent(pesanwhatsapp);
+    }
+  </script>
+  <script src="https://feeldreams.github.io/heihbd/script.js"></script>
+</body>
+</html>
